@@ -539,6 +539,10 @@ func _init_diseases():
 	]
 
 
+func get_all_diseases() -> Array:
+	return all_diseases
+
+
 func find_by_id(disease_id: String) -> Dictionary:
 	for disease in all_diseases:
 		if disease.get("id") == disease_id:

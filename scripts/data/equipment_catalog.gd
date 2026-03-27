@@ -635,6 +635,10 @@ func _init_catalog():
 	]
 
 
+func get_all_equipment() -> Array:
+	return all_equipment
+
+
 func find_by_id(equip_id: String) -> Dictionary:
 	for item in all_equipment:
 		if item.get("id") == equip_id:

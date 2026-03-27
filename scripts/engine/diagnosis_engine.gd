@@ -393,7 +393,7 @@ func _generate_initial_differential(i: int, state: Dictionary) -> void:
 			var base_prob: float = symptom_match_ratio * 0.6
 			differential.append({
 				"disease_id": disease.get("id", ""),
-				"disease_name": disease.get("disease_name", "Unknown"),
+				"disease_name": disease.get("name", "Unknown"),
 				"probability": base_prob,
 				"ruled_out": false,
 			})

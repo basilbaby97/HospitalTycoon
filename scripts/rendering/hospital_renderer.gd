@@ -669,10 +669,4 @@ func grid_position_from_world(world_pos: Vector2) -> Vector2i:
 
 
 func _get_room_definition(room_type: int) -> Dictionary:
-	# Try to get from RoomDefinitions autoload, fall back to defaults
-	if Engine.has_singleton("RoomDefinitions"):
-		var rd = Engine.get_singleton("RoomDefinitions")
-		if rd.has_method("get_definition"):
-			return rd.get_definition(room_type)
-	# Fallback default sizes
-	return {"width": 3, "height": 3, "department": 0}
+	return RoomDefs.get_definition(room_type)
